@@ -12,7 +12,7 @@
     }
     main {
       padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -23,72 +23,99 @@
       margin-bottom: 20px;
       color: #333;
     }
-    .continent {
-      font-weight: bold;
-      cursor: pointer;
-      padding: 5px;
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
       background-color: #2a5298;
       color: white;
-      border: none;
-      text-align: left;
-      width: 100%;
-      margin: 5px 0;
+    }
+    td {
+      background-color: #f9f9f9;
+    }
+    .continent {
+      background-color: #2a5298;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
     }
     .country-list {
-      display: none;
-      padding-left: 20px;
+      display: block;
+      padding: 10px;
+      background-color: #f9f9f9;
+      list-style-type: none;
     }
     .country-list a {
       text-decoration: none;
       color: #2a5298;
-      font-size: 18px;
+      font-size: 16px;
     }
     .country-list a:hover {
       color: #ff6600;
     }
   </style>
-  <script>
-    function toggleCountryList(continent) {
-      const countryList = document.getElementById(continent);
-      if (countryList.style.display === 'none') {
-        countryList.style.display = 'block';
-      } else {
-        countryList.style.display = 'none';
-      }
-    }
-  </script>
 </head>
 <body>
 
   <main>
     <h2>Linki do mojej kolekcji według kontynentów:</h2>
     
-    <!-- Kontynent: Europa -->
-    <button class="continent" onclick="toggleCountryList('europe')">Europa</button>
-    <div id="europe" class="country-list">
-      <a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a><br>
-      <a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a><br>
-      <a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a><br>
-      <!-- Dodaj inne kraje Europy -->
-    </div>
+    <table>
+      <tr>
+        <th class="continent" colspan="2">Europa</th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ul class="country-list">
+            <li><a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a></li>
+            <li><a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a></li>
+            <li><a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a></li>
+            <!-- Dodaj inne kraje Europy -->
+          </ul>
+        </td>
+      </tr>
+    </table>
 
-    <!-- Kontynent: Azja -->
-    <button class="continent" onclick="toggleCountryList('asia')">Azja</button>
-    <div id="asia" class="country-list">
-      <a href="https://crowncaps.info/collections/4585?countryId=356" target="_blank">🇮🇳 Indie</a><br>
-      <a href="https://crowncaps.info/collections/4585?countryId=704" target="_blank">🇻🇳 Wietnam</a><br>
-      <a href="https://crowncaps.info/collections/4585?countryId=356" target="_blank">🇮🇳 Indie</a><br>
-      <!-- Dodaj inne kraje Azji -->
-    </div>
+    <table>
+      <tr>
+        <th class="continent" colspan="2">Azja</th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ul class="country-list">
+            <li><a href="https://crowncaps.info/collections/4585?countryId=356" target="_blank">🇮🇳 Indie</a></li>
+            <li><a href="https://crowncaps.info/collections/4585?countryId=704" target="_blank">🇻🇳 Wietnam</a></li>
+            <!-- Dodaj inne kraje Azji -->
+          </ul>
+        </td>
+      </tr>
+    </table>
 
-    <!-- Kontynent: Ameryka -->
-    <button class="continent" onclick="toggleCountryList('america')">Ameryka</button>
-    <div id="america" class="country-list">
-      <a href="https://crowncaps.info/collections/4585?countryId=840" target="_blank">🇺🇸 Stany Zjednoczone</a><br>
-      <a href="https://crowncaps.info/collections/4585?countryId=32" target="_blank">🇦🇷 Argentyna</a><br>
-      <!-- Dodaj inne kraje Ameryki -->
-    </div>
-    
+    <table>
+      <tr>
+        <th class="continent" colspan="2">Ameryka</th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ul class="country-list">
+            <li><a href="https://crowncaps.info/collections/4585?countryId=840" target="_blank">🇺🇸 Stany Zjednoczone</a></li>
+            <li><a href="https://crowncaps.info/collections/4585?countryId=32" target="_blank">🇦🇷 Argentyna</a></li>
+            <!-- Dodaj inne kraje Ameryki -->
+          </ul>
+        </td>
+      </tr>
+    </table>
+
   </main>
 
 </body>

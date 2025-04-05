@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Kolekcja kapsli Mateusz Kozłowski</title>
+  <title>Kolekcja kapsli - Mateusz Kozłowski</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -10,101 +10,85 @@
       margin: 0;
       padding: 0;
     }
-
-    header {
-      background: linear-gradient(135deg, #2a5298, #1e3c72);
-      color: white;
-      padding: 40px 20px 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .logo {
-      font-size: 36px;
-      font-weight: 700;
-      font-family: 'Arial', sans-serif;
-      text-transform: uppercase;
-      color: #ffd700;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-
-    .subtitle {
-      font-size: 20px;
-      font-weight: 300;
-      color: #eee;
-    }
-
     main {
       padding: 30px;
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
       background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
-
     h2 {
       text-align: center;
       margin-bottom: 20px;
       color: #333;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
+    .continent {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px;
+      background-color: #2a5298;
+      color: white;
+      border: none;
+      text-align: left;
+      width: 100%;
+      margin: 5px 0;
     }
-
-    li {
-      margin: 15px 0;
-      text-align: center;
+    .country-list {
+      display: none;
+      padding-left: 20px;
     }
-
-    a {
+    .country-list a {
       text-decoration: none;
       color: #2a5298;
       font-size: 18px;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: 0.3s;
     }
-
-    a:hover {
+    .country-list a:hover {
       color: #ff6600;
-      border-bottom: 2px solid #ff6600;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 28px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      a {
-        font-size: 16px;
-      }
     }
   </style>
+  <script>
+    function toggleCountryList(continent) {
+      const countryList = document.getElementById(continent);
+      if (countryList.style.display === 'none') {
+        countryList.style.display = 'block';
+      } else {
+        countryList.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Kolekcja Kapsli - Mateusz Kozłowski</div>
-    <div class="subtitle">Mateusz Kozłowski</div>
-  </header>
-
   <main>
-    <h2>Linki do mojej kolekcji według kraju:</h2>
-    <ul>
-      <li><a href="https://crowncaps.info/collections/4585" target="_blank">🌍 Wszystkie kapsle</a></li>
-      <li><a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a></li>
-      <li><a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a></li>
-      <li><a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a></li>
-      <li><a href="https://crowncaps.info/collections/4585?countryId=643" target="_blank">🇷🇺 Rosja</a></li>
-      <li><a href="https://crowncaps.info/collections/4585?countryId=380" target="_blank">🇺🇦 Ukraina</a></li>
-    </ul>
+    <h2>Linki do mojej kolekcji według kontynentów:</h2>
+    
+    <!-- Kontynent: Europa -->
+    <button class="continent" onclick="toggleCountryList('europe')">Europa</button>
+    <div id="europe" class="country-list">
+      <a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a><br>
+      <a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a><br>
+      <a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a><br>
+      <!-- Dodaj inne kraje Europy -->
+    </div>
+
+    <!-- Kontynent: Azja -->
+    <button class="continent" onclick="toggleCountryList('asia')">Azja</button>
+    <div id="asia" class="country-list">
+      <a href="https://crowncaps.info/collections/4585?countryId=356" target="_blank">🇮🇳 Indie</a><br>
+      <a href="https://crowncaps.info/collections/4585?countryId=704" target="_blank">🇻🇳 Wietnam</a><br>
+      <a href="https://crowncaps.info/collections/4585?countryId=356" target="_blank">🇮🇳 Indie</a><br>
+      <!-- Dodaj inne kraje Azji -->
+    </div>
+
+    <!-- Kontynent: Ameryka -->
+    <button class="continent" onclick="toggleCountryList('america')">Ameryka</button>
+    <div id="america" class="country-list">
+      <a href="https://crowncaps.info/collections/4585?countryId=840" target="_blank">🇺🇸 Stany Zjednoczone</a><br>
+      <a href="https://crowncaps.info/collections/4585?countryId=32" target="_blank">🇦🇷 Argentyna</a><br>
+      <!-- Dodaj inne kraje Ameryki -->
+    </div>
+    
   </main>
 
 </body>

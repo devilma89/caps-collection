@@ -2,21 +2,112 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Moja kolekcja kapsli</title>
+  <title>Kolekcja kapsli Mateusz Kozłowski</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f3f3;
       margin: 0;
+      padding: 0;
     }
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
+
+    header {
+      background: linear-gradient(135deg, #2a5298, #1e3c72);
+      color: white;
+      padding: 40px 20px 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: 900;
+      font-family: 'Georgia', serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffd700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 300;
+      color: #eee;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2a5298;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #ff6600;
+      border-bottom: 2px solid #ff6600;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Moja kolekcja kapsli</h1>
-  <iframe src="https://crowncaps.info/collections/4585"></iframe>
+
+  <header>
+    <div class="logo">Kolekcja kapsli</div>
+    <div class="subtitle">Mateusz Kozłowski</div>
+  </header>
+
+  <main>
+    <h2>Linki do mojej kolekcji według kraju:</h2>
+    <ul>
+      <li><a href="https://crowncaps.info/collections/4585" target="_blank">🌍 Wszystkie kapsle</a></li>
+      <li><a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a></li>
+      <li><a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a></li>
+      <li><a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a></li>
+      <li><a href="https://crowncaps.info/collections/4585?countryId=643" target="_blank">🇷🇺 Rosja</a></li>
+      <li><a href="https://crowncaps.info/collections/4585?countryId=380" target="_blank">🇺🇦 Ukraina</a></li>
+    </ul>
+  </main>
+
 </body>
 </html>

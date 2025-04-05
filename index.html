@@ -19,9 +19,13 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    .logo img {
-      width: 150px;
-      height: auto;
+    .logo {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      color: #ffd700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     .subtitle {
@@ -70,8 +74,8 @@
     }
 
     @media (max-width: 600px) {
-      .logo img {
-        width: 120px;
+      .logo {
+        font-size: 28px;
       }
 
       .subtitle {
@@ -87,16 +91,14 @@
 <body>
 
   <header>
-    <div class="logo">
-      <!-- Użyj pełnego URL do obrazu z GitHub -->
-      <img src="caps-collection/logo.jpeg">
-    </div>
+    <div class="logo">Kolekcja Kapsli - Mateusz Kozłowski</div>
     <div class="subtitle">Mateusz Kozłowski</div>
   </header>
 
   <main>
     <h2>Linki do mojej kolekcji według kraju:</h2>
     <ul>
+      <li><a href="https://crowncaps.info/collections/4585" target="_blank">🌍 Wszystkie kapsle</a></li>
       <li><a href="https://crowncaps.info/collections/4585?countryId=84" target="_blank">🇦🇱 Albania</a></li>
       <li><a href="https://crowncaps.info/collections/4585?countryId=276" target="_blank">🇩🇪 Niemcy</a></li>
       <li><a href="https://crowncaps.info/collections/4585?countryId=203" target="_blank">🇵🇱 Polska</a></li>
